@@ -1,0 +1,36 @@
+{
+  "name": "pro-complex-math",
+  "version": "1.0.0",
+  "description": "A professional package for complex number operations and advanced mathematical functions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "complex-numbers",
+    "mathematics",
+    "financial",
+    "typescript",
+    "optimized"
+  ],
+  "author": "debraj28",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.10",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.6",
+    "typescript": "^5.8.2"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/pro-complex-math.git"
+  }
+}
