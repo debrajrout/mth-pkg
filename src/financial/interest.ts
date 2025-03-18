@@ -1,8 +1,8 @@
 /**
- * Simple interest calculate karta hai.
- * @param principal Initial amount.
- * @param rate Interest rate per period.
- * @param time Number of periods (years assumed).
+ * Simple interest nikal ke batata hai—sidha saada hisaab!
+ * @param principal Initial amount, jo tune lagaya.
+ * @param rate Interest rate per period, kitna badhna hai.
+ * @param time Number of periods (years assumed), kitne din tak.
  * @returns Total amount after simple interest.
  */
 export function simpleInterest(
@@ -11,17 +11,17 @@ export function simpleInterest(
   time: number
 ): number {
   if (principal < 0 || rate < 0 || time < 0) {
-    throw new Error("Negative values are not allowed");
+    throw new Error("Negative daalega toh gharwale daantenge!");
   }
   return principal * (1 + rate * time);
 }
 
 /**
- * Compound interest calculate karta hai.
- * @param principal Initial amount.
- * @param rate Interest rate per period.
- * @param time Number of periods (years assumed).
- * @param n Compounding frequency per period (default 1).
+ * Compound interest nikal ke dikhata hai—paisa badhne ka asli tareeka!
+ * @param principal Initial amount, jo tune lagaya.
+ * @param rate Interest rate per period, kitna badhna hai.
+ * @param time Number of periods (years assumed), kitne din tak.
+ * @param n Compounding frequency per period (default 1), kitni baar badhega.
  * @returns Total amount after compound interest.
  */
 export function compoundInterest(
@@ -31,7 +31,7 @@ export function compoundInterest(
   n: number = 1
 ): number {
   if (principal < 0 || rate < 0 || time < 0 || n <= 0) {
-    throw new Error("Invalid input values");
+    throw new Error("Bhai, galat input mat daal!");
   }
   return principal * Math.pow(1 + rate / n, n * time);
 }

@@ -1,8 +1,8 @@
 import { Complex } from "../src/complex/Complex";
 
-describe("Complex Number Operations", () => {
+describe("Complex Number Operations - Bhai ke Style Mein", () => {
   // Basic Operations
-  test("should add two complex numbers correctly", () => {
+  test("do complex numbers ko jodna - ekdum perfect!", () => {
     const c1 = new Complex(1, 2);
     const c2 = new Complex(3, 4);
     const result = c1.add(c2);
@@ -10,7 +10,7 @@ describe("Complex Number Operations", () => {
     expect(result.imag).toBe(6);
   });
 
-  test("should subtract two complex numbers correctly", () => {
+  test("do complex numbers ka ghataav - budget cut jaisa!", () => {
     const c1 = new Complex(5, 6);
     const c2 = new Complex(3, 4);
     const result = c1.subtract(c2);
@@ -18,7 +18,7 @@ describe("Complex Number Operations", () => {
     expect(result.imag).toBe(2);
   });
 
-  test("should multiply two complex numbers correctly", () => {
+  test("do complex numbers ka guna - profit badha diya!", () => {
     const c1 = new Complex(1, 2);
     const c2 = new Complex(3, 4);
     const result = c1.multiply(c2);
@@ -26,7 +26,7 @@ describe("Complex Number Operations", () => {
     expect(result.imag).toBe(10); // (1*4 + 2*3)
   });
 
-  test("should divide two complex numbers correctly", () => {
+  test("do complex numbers ka bhag - zero se door raho!", () => {
     const c1 = new Complex(1, 2);
     const c2 = new Complex(1, 1);
     const result = c1.divide(c2);
@@ -35,14 +35,14 @@ describe("Complex Number Operations", () => {
   });
 
   // Edge Case: Division by Zero
-  test("should throw error when dividing by zero", () => {
+  test("zero se bhag karne pe error - bhai ne mana kiya!", () => {
     const c1 = new Complex(1, 2);
     const c2 = new Complex(0, 0);
-    expect(() => c1.divide(c2)).toThrow("Division by zero");
+    expect(() => c1.divide(c2)).toThrow("Bhai, zero se kyun ladne laga?");
   });
 
   // Conjugate
-  test("should calculate conjugate correctly", () => {
+  test("conjugate nikalna - mirror me ulta chehra!", () => {
     const c = new Complex(1, 2);
     const result = c.conjugate();
     expect(result.real).toBe(1);
@@ -50,40 +50,40 @@ describe("Complex Number Operations", () => {
   });
 
   // Magnitude
-  test("should calculate magnitude correctly", () => {
+  test("magnitude nikalna - power check!", () => {
     const c = new Complex(3, 4);
     const result = c.magnitude();
     expect(result).toBe(5); // sqrt(3^2 + 4^2) = 5
   });
 
   // Phase
-  test("should calculate phase correctly", () => {
+  test("phase nikalna - direction batata hai!", () => {
     const c = new Complex(1, 1);
     const result = c.phase();
     expect(result).toBeCloseTo(Math.PI / 4); // atan2(1, 1) = 45 degrees
   });
 
   // Polar Form
-  test("should convert to polar form correctly", () => {
+  test("polar form me badalna - style me present!", () => {
     const c = new Complex(3, 4);
     const result = c.toPolar();
     expect(result.magnitude).toBe(5);
     expect(result.phase).toBeCloseTo(Math.atan2(4, 3));
   });
 
-  test("should create complex number from polar form correctly", () => {
+  test("polar se complex banana - recipe se khana!", () => {
     const c = Complex.fromPolar(5, Math.PI / 4);
     expect(c.real).toBeCloseTo(5 * Math.cos(Math.PI / 4));
     expect(c.imag).toBeCloseTo(5 * Math.sin(Math.PI / 4));
   });
 
   // toString
-  test("should return string representation correctly", () => {
+  test("string me badalna - sabko samajh aaye!", () => {
     const c = new Complex(1, 2);
     expect(c.toString()).toBe("1 + 2i");
   });
 
-  test("should handle negative imaginary part in string", () => {
+  test("negative imaginary ke saath string - sahi dikhna chahiye!", () => {
     const c = new Complex(1, -2);
     expect(c.toString()).toBe("1 + -2i");
   });

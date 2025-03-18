@@ -1,34 +1,34 @@
 /**
- * Ek complex number ko represent karta hai jisme real aur imaginary parts hote hain.
+ * Ek complex number ka boss, jisme real aur imaginary dono hote hain—bilkul zindagi ke ups aur downs jaisa!
  */
 export class Complex {
   /**
-   * Ek naya complex number banata hai.
-   * @param real Real part.
-   * @param imag Imaginary part.
+   * Ek naya complex number banata hai, jaise nayi kahani shuru karna.
+   * @param real Real part, jo zindagi ka sach hai.
+   * @param imag Imaginary part, jo sapne jaisa hai.
    */
   constructor(public real: number, public imag: number) {}
 
   /**
-   * Do complex numbers ko add karta hai.
+   * Do complex numbers ko jodta hai, bilkul do bhaiyon ka reunion!
    * @param other Dusra complex number.
-   * @returns Naya complex number jo sum hai.
+   * @returns Naya complex number jo inka total hai.
    */
   add(other: Complex): Complex {
     return new Complex(this.real + other.real, this.imag + other.imag);
   }
 
   /**
-   * Ek complex number ko dusre se subtract karta hai.
+   * Ek complex number se dusra ghatata hai—jaise budget me kharcha kam karna.
    * @param other Dusra complex number.
-   * @returns Naya complex number jo difference hai.
+   * @returns Naya complex number jo fark hai.
    */
   subtract(other: Complex): Complex {
     return new Complex(this.real - other.real, this.imag - other.imag);
   }
 
   /**
-   * Do complex numbers ka multiplication.
+   * Do complex numbers ka guna, bilkul business me profit badhane jaisa.
    * @param other Dusra complex number.
    * @returns Naya complex number jo product hai.
    */
@@ -39,14 +39,14 @@ export class Complex {
   }
 
   /**
-   * Ek complex number ko dusre se divide karta hai.
+   * Ek complex number ko dusre se bhag karta hai—par zero se ladne mat bolna!
    * @param other Dusra complex number.
    * @returns Naya complex number jo quotient hai.
-   * @throws Error agar zero se divide karne ki koshish ho.
+   * @throws Error agar zero se divide karne ki koshish ki.
    */
   divide(other: Complex): Complex {
     if (other.real === 0 && other.imag === 0) {
-      throw new Error("Division by zero");
+      throw new Error("Bhai, zero se kyun ladne laga?");
     }
     const denom = other.real * other.real + other.imag * other.imag;
     const real = (this.real * other.real + this.imag * other.imag) / denom;
@@ -55,7 +55,7 @@ export class Complex {
   }
 
   /**
-   * Complex number ka conjugate return karta hai.
+   * Complex number ka conjugate, jaise mirror me apna ulta chehra dekhna.
    * @returns Naya complex number jo conjugate hai.
    */
   conjugate(): Complex {
@@ -63,7 +63,7 @@ export class Complex {
   }
 
   /**
-   * Complex number ka magnitude calculate karta hai.
+   * Complex number ka magnitude—iska power dikha deta hai!
    * @returns Magnitude.
    */
   magnitude(): number {
@@ -71,7 +71,7 @@ export class Complex {
   }
 
   /**
-   * Complex number ka phase (argument) radians mein.
+   * Complex number ka phase (argument) radians mein—direction batata hai.
    * @returns Phase radians mein.
    */
   phase(): number {
@@ -79,7 +79,7 @@ export class Complex {
   }
 
   /**
-   * Complex number ko polar form mein convert karta hai.
+   * Complex number ko polar form me badalta hai—style me present karne ke liye.
    * @returns Magnitude aur phase ka object.
    */
   toPolar(): { magnitude: number; phase: number } {
@@ -87,9 +87,9 @@ export class Complex {
   }
 
   /**
-   * Polar coordinates se complex number banata hai.
-   * @param magnitude Magnitude.
-   * @param phase Phase radians mein.
+   * Polar coordinates se complex number banata hai—jaise recipe se khana.
+   * @param magnitude Magnitude, power kitna hai.
+   * @param phase Phase radians mein, direction kya hai.
    * @returns Naya complex number.
    */
   static fromPolar(magnitude: number, phase: number): Complex {
@@ -99,7 +99,7 @@ export class Complex {
   }
 
   /**
-   * Complex number ki string representation.
+   * Complex number ki string representation—sabko samajh aane wala style.
    * @returns String format mein complex number.
    */
   toString(): string {
