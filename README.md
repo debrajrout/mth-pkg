@@ -368,39 +368,8 @@ MIT License - see LICENSE for details.
 
 ## Author
 
-Sun - [@debrajrout28]
+Dev - [@debrajrout28]
 
 ---
 
-### Key Highlights
 
-1. **Introduction**: Package ka overview aur features.
-2. **Installation**: Simple install command.
-3. **Usage**: Har function/method ka:
-   - Description
-   - Parameters
-   - Return value
-   - Error cases (agar applicable)
-   - Code example
-4. **Development**: Developers ke liye contribution guide.
-5. **License**: MIT license (tu change kar sakta hai).
-
----
-
-### Action
-
-1. Apne project folder mein `README.md` file bana.
-2. Upar wala content copy-paste kar de.
-3. Apne hisaab se customize kar:
-   - `name` agar alag hai toh change kar.
-   - `author` mein apna GitHub ya email add kar.
-   - `repository` URL daal agar GitHub pe host kar raha hai.
-
-Fir build aur publish karne ke liye:
-
-```bash
-npm run build
-npm test
-npm login
-npm publish --access public
-```
